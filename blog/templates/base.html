@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html {% if LANGUAGE_CODE %}lang="{{ LANGUAGE_CODE }}"{% endif %}>
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>Pixels_and_Programming</title>
+    {% load static %}
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+<body class="body_background">
+    <section class="img">
+    <header class="page_header">
+        <div class="header_container">
+            <nav>
+                <a href="{% url 'index' %}"><img src="../static/jpg/logo.png" class="logo"></a>
+            </nav>
+
+            <nav class="navigation">
+                <a class="nav_a" href="{% url 'index' %}">GŁÓWNA</a>
+                <a class="nav_a" href="">KONTAKT</a>
+                <a class="nav_a" href="">MOJE CV</a>
+                {% if user.is_authenticated %}
+                <a class="nav_a" href="{% url 'logout' %}">WYLOGUJ</a>
+                    {% else %}
+                    <a class="nav_a" href="{% url 'login' %}">ZALOGUJ SIĘ</a>
+                {% endif %}
+
+
+            </nav>
+
+        </div>
+    </header>
+    <section>
+         {% block content %}
+
+         {% endblock %}
+    </section>
+    </section>
+
+
+    <footer>
+         <section class="footer">Pixels and Programming 2023.</section>
+    </footer>
+</body>
+</html>

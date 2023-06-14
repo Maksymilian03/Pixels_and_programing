@@ -1,0 +1,66 @@
+html {
+    text-size-adjust: 100%;
+    scroll-behavior: smooth;
+}
+
+.header_container{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.img{
+    background-image: url("../jpg/tlo-profil.jpg");
+    background-size: 100%;
+
+
+}
+
+.body_background{
+    background-color: black;
+}
+
+.page_header {
+    margin: 0 auto;
+    padding: 30px 0;
+    max-width: 1200px;
+}
+
+.about_me{
+    color: darkgray;
+    width: 500px;
+}
+
+.logo_insta{
+    padding-right: 15px;
+}
+
+.container_section{
+    margin: 0 auto;
+    padding: 30px 0;
+    max-width: 1200px;
+}
+
+.footer{
+    color: white;
+    margin: 0 auto;
+    padding: 30px 0;
+    max-width: 1200px;
+}
+
+.logo{
+    height: 50px;
+    width: 450px;
+}
+
+.nav_a{
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    flex: 1;
+}
+
+.nav_a:hover{
+    font-weight: bold;
+    color: rgb(253, 149, 63);
+}
