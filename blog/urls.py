@@ -1,7 +1,8 @@
-from django.urls import path
-from .views import Main_page, ArticleCreateView
+from django.urls import path, include
+from .views import Main_page, article_create_form
 
 urlpatterns = [
     path('', Main_page.as_view(), name='index'),
-    path('article/create', ArticleCreateView.as_view(), name='article_crate')
+    path('article', article_create_form)
+
 ]
