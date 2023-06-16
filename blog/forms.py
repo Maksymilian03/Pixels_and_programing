@@ -11,3 +11,9 @@ class ArticleForm(forms.ModelForm):
             'contents',
             'date'
         ]
+
+
+class NewForm(forms.Form):
+    contents = forms.CharField()
+    title = forms.CharField()
+    date = forms.DateField()
