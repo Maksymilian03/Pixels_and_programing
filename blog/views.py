@@ -17,11 +17,6 @@ def article_create_form(request):
         else:
             print(nowy_form.errors)
 
-    # form = ArticleForm(request.POST or None)
-    # if form.is_valid():
-    #     form.save(commit=True)
-    #     form = ArticleForm()
-
     context = {"form": nowy_form}
 
     return render(request, 'form.html', context)
