@@ -14,6 +14,7 @@ def article_create_form(request):
         if nowy_form.is_valid():
             print(nowy_form.cleaned_data)
             Article.objects.create(**nowy_form.cleaned_data)
+            nowy_form = NewForm()
         else:
             print(nowy_form.errors)
 
