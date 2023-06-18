@@ -23,9 +23,15 @@ def article_create_form(request):
     return render(request, 'form.html', context)
 
 
-class Main_page(ListView):
+def Main_page(request):
+    articles = Article.objects.all()
     template_name = 'main_page.html'
     model = Article
+
+    context = {'articles': articles}
+
+    return render(request, 'main_page.html', context )
+
 
 
 # class ArticleCreateView(PermissionRequiredMixin, CreateView):
