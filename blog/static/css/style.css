@@ -64,3 +64,39 @@ html {
     font-weight: bold;
     color: rgb(253, 149, 63);
 }
+
+.box_section{
+    margin: auto;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.box{
+    border-radius:30px ;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 240px;
+    border: 2px solid black;
+    background-color: #ffff;
+    transition: 0.5s all ease;
+}
+
+.box{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+/*.box:hover{*/
+/*    flex: 2;*/
+/*    max-width: 275px;*/
+/*}*/
+
+.box:checked{
+    flex: 2;
+    max-width: 275px;
+}
