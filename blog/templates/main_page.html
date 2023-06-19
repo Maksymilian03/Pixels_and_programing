@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 
+
 {% block content %}
+
     <section class="img_section">
     <section class="container_section">
     <h2>Cześć jestem Maks</h2>
@@ -21,15 +23,15 @@
     <a class="logo_insta" href="https://www.facebook.com/maksiu.stolarek/"><img src="../static/jpg/facebook_kolory.png"></a>
     </section>
     </section>
+
     <section>
 
     <div class="box_section">
         {% for article in articles %}
             <div class="box">
-               <p>{{ article.title }}</p>
-               <p>{{ article.contents }}</p>
-               <p>{{ article.date }}</p>
-
+               <h3 class="title">{{ article.title }}</h3>
+               <p class="content">{{ article.contents }}</p>
+               <p class="date">{{ article.date }}</p>
             </div>
 
          {% endfor %}
@@ -37,3 +39,4 @@
     </section>
 
 {% endblock %}
+
