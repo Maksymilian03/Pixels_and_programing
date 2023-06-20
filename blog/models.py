@@ -10,7 +10,7 @@ class Article(models.Model):
     date = models.DateField()
     like_counter = models.IntegerField(default=0)
     com_counter = models.IntegerField(default=0)
-    jpg = models.ImageField(upload_to='blog/static/jpg', null=True, blank=True)
+    jpg = models.ImageField(upload_to='static/jpg', null=True, blank=True)
 
     def __str__(self):
         return f"ID: {self.ID} Title: {self.title}, Contents: {self.contents}"

@@ -29,8 +29,8 @@
     <div class="box_section">
         {% for article in articles %}
             <div class="box">
-               <h3 class="title">{{ article.title }}</h3>
-               <p class="content">{{ article.contents }}</p>
+                <img src="{{ article.jpg }}" class="baner">
+               <h2 class="title">{{ article.title }}</h2>
                <p class="date">{{ article.date }}</p>
             </div>
 
@@ -40,3 +40,4 @@
 
 {% endblock %}
 
+ss

@@ -75,9 +75,9 @@ html {
 
 }
 .box{
-    width: 25%;
+    width: 300px;
     height: 400px;
-    background-color: lightgrey;
+    background-color: white;
     margin: 10px;
     padding: 20px;
     border: 2px solid black;
@@ -90,10 +90,16 @@ html {
     margin: 0px;
 }
 
-.content{
-    font-size: 20px;
-    margin-top: 10px;
-    margin-bottom: 0px;
+.baner{
+    height: 280px;
+    width: 280px;
+    margin: 0 10px 10px 10px;
+}
+
+.baner:hover{
+    height: 300px;
+    width: 300px;
+    margin: 0 0 10px 0;
 }
 
 .date{
