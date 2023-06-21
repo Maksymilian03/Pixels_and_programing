@@ -29,9 +29,9 @@
     <div class="box_section">
         {% for article in articles %}
             <div class="box">
-                <img src="{{ article.jpg }}" class="baner">
-               <h2 class="title">{{ article.title }}</h2>
-               <p class="date">{{ article.date }}</p>
+                <a href="{% url 'index' %}"><img src="{{ article.jpg }}" class="baner"></a>
+               <a href="{% url 'index' %}"><h2 class="title">{{ article.title }}</h2></a>
+              <p class="date">{{ article.date }}</p>
             </div>
 
          {% endfor %}
