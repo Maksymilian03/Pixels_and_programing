@@ -85,11 +85,9 @@ html {
 }
 
 .title{
-    font-weight: bold;
     font-size: 30px;
-    margin: 0px;
+    margin: 0;
     color: black;
-    text-decoration: none;
 }
 
 .baner{
