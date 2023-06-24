@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html {% if LANGUAGE_CODE %}lang="{{ LANGUAGE_CODE }}"{% endif %}>
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>Pixels_and_Programming</title>
+    {% load static %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <link href="{% static '../../static/css/style.css' %}" rel="stylesheet">
+</head>
+<body class="body_background">
+    <section class="img">
+    <header class="page_header">
+        <div class="header_container">
+            <nav>
+                <a href="{% url 'index' %}"><img src="../static/jpg/logo.png" class="logo"></a>
+            </nav>
+
+            <nav class="navigation">
+                <a class="nav_a" href="{% url 'index' %}">GŁÓWNA</a>
+                <a class="nav_a" href="">KONTAKT</a>
+                <a class="nav_a" href="{% url 'create_form' %}">UTWÓRZ FORMULARZ</a>
+                <a class="nav_a" href="">MOJE CV</a>
+                {% if user.is_authenticated %}
+                <a class="nav_a" href="{% url 'logout' %}">WYLOGUJ</a>
+                    {% else %}
+                    <a class="nav_a" href="{% url 'login' %}">ZALOGUJ SIĘ</a>
+                {% endif %}
+
+
+            </nav>
+
+        </div>
+    </header>
+    <section class="img_section">
+    <section class="container_section">
+    <h2>Cześć jestem Maks</h2>
+    <p class="about_me">
+       Bardzo się cieszę, że tu jesteś. Ten blog poświęcony
+        jest dwóm moim wielkim pasjom: fotografii i programowaniu. Mam nadzieję, że znajdziesz tu wiele interesujących
+        informacji, porad oraz inspiracji z tych dziedzin. Fotografia to dla mnie sposób na uchwycenie piękna
+        otaczającego świata i dzielenie się nim z innymi. Programowanie z kolei daje mi nieograniczone możliwości
+        tworzenia i rozwijania nowych narzędzi, które ułatwiają życie i pracę.
+        Mam nadzieję, że będziesz tu zaglądać regularnie i czerpać z tego, co mam do zaoferowania. W razie pytań,
+        sugestii czy po prostu chęci porozmawiania, zachęcam do zostawienia komentarza pod postami lub kontaktu
+        ze mną bezpośrednio.
+
+        Pozdrawiam serdecznie i życzę miłego czytania!
+    </p>
+    <a class="logo_insta" href="https://www.instagram.com/stolar.pro/"><img src="../static/jpg/insta_kolory.png"></a>
+    <a class="logo_insta" href="https://www.linkedin.com/in/maksymilian-stolarek/"><img src="../static/jpg/logo_linkedin2.png"></a>
+    <a class="logo_insta" href="https://www.facebook.com/maksiu.stolarek/"><img src="../static/jpg/facebook_kolory.png"></a>
+    </section>
+    </section>
+    </section>
+    <section>
+         {% block content %}
+
+         {% endblock %}
+
+    </section>
+
+
+    <footer>
+         <section class="footer">Pixels and Programming 2023.</section>
+    </footer>
+</body>
+</html>

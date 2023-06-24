@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views.generic import ListView, CreateView
 from django.urls import reverse_lazy
 from .models import Article
+from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin, UserPassesTestMixin
 from .forms import ArticleForm, NewForm
 # Create your views here.
@@ -23,16 +24,19 @@ def article_create_form(request):
     return render(request, 'form.html', context)
 
 
-def Main_page(request):
+def main_page(request):
     articles = Article.objects.all()
-    template_name = 'main_page.html'
-    model = Article
 
     context = {'articles': articles}
 
-    return render(request, 'main_page.html', context )
+    return render(request, 'main_page.html', context)
 
 
+def article_view(request, id):
+    obj = Article.objects.get(ID=id)
+    context = {"object": obj}
+
+    return render(request, "View_article.html", context)
 
 # class ArticleCreateView(PermissionRequiredMixin, CreateView):
 #     template_name = 'form.html'
