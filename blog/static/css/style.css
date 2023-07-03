@@ -12,6 +12,8 @@ html {
 .img{
     background-image: url("../jpg/tlo-profil.jpg");
     background-size: 100%;
+    height: 600px;
+    margin: 0;
 
 
 }
@@ -27,7 +29,7 @@ html {
 }
 
 .about_me{
-    color: darkgray;
+    color: black;
     width: 500px;
 }
 
@@ -79,33 +81,48 @@ html {
     height: 400px;
     background-color: white;
     margin: 50px;
-    padding: 20px;
+    padding: 15px;
     border: 2px solid black;
     border-radius:30px ;
 }
 
 .title{
-    font-size: 30px;
+    font-size: 25px;
     margin: 0;
     color: black;
 }
 
 .baner{
-    height: 280px;
-    width: 280px;
+    height: 100%;
+    width: 100%;
+    max-height: 280px;
+    max-width: 280px;
     margin: 0 10px 10px 10px;
 }
 
 .baner:hover{
-    height: 300px;
-    width: 300px;
-    margin: 0 0 10px 0;
+    max-height: 300px;
+    max-width: 300px;
+    margin: 0 10px 0 0;
 }
 
 .date{
     font-size: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 1px;
     color: black;
 }
+
+.button{
+    background-color: black;
+    border: none;
+    color: white;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    text-align: center;
+    width: 300px;
+    height: 40px;
+    font-size: 16px;
+}
+
 
