@@ -36,7 +36,7 @@ def article_view(request, id):
     obj = Article.objects.get(ID=id)
     context = {"object": obj}
 
-    return render(request, "View_article.html", context)
+    return render(request, 'view_article.html', context)
 
 # class ArticleCreateView(PermissionRequiredMixin, CreateView):
 #     template_name = 'form.html'
