@@ -9,8 +9,11 @@
         {% for article in articles %}
             <div class="box">
                 <a href="{% url 'article_view' article.ID%}"><img src="{{ article.jpg }}" class="baner"></a>
-               <a href="{% url 'article_view' article.ID %}"><h2 class="title">{{ article.title }}</h2></a>
-              <p class="date">{{ article.date }}</p>
+                <a href="{% url 'article_view' article.ID %}"><h2 class="title">{{ article.title }}</h2></a>
+                <p class="date">{{ article.date }}</p>
+                <form action="{% url 'article_view' article.ID%}">
+                <input type="submit" class="button" value="Czytaj całość" />
+                </form>
             </div>
 
          {% endfor %}
